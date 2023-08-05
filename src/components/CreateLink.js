@@ -30,15 +30,17 @@ const CreateLink = () => {
         query: FEED_QUERY,
       });
 
+      console.log(cache);
       cache.writeQuery({
         query: FEED_QUERY,
         data: {
           feed: {
-            links: [post, ...data.feed.links],
+            // links: [post, ...data.feed.links],
           },
         },
       });
     },
+
     onCompleted: () => navigate("/"),
   });
 
